@@ -1,0 +1,24 @@
+[package]
+name = "rust-ms"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+c8y-sdk = { path = "../c8y-sdk" }
+c8y-ms-sdk = { path = "../c8y-ms-sdk" }
+actix-utils = "3.0"
+actix-web = { version = "4.5" }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls-native-roots", "blocking"] }
+serde = {version = "1.0", features = ["derive"]}
+serde_json = "1.0"
+error-chain = "0.12"
+derive_more = "0.99"
+thiserror = "1.0"
+dashmap = "5.5"
+env_logger = "0.11"
+base64 = "0.22"
+tokio-cron-scheduler = { version = "0.10", features = ["signal"] }
+once_cell = "1.19"
+tokio = "1.37"
